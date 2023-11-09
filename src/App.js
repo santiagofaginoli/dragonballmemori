@@ -159,7 +159,7 @@ function App() {
       <button onClick={shuffleCards} className="btn">
         Nuevo juego
       </button>
-      <div style={{justifyContent:"center"}}>
+      <div style={{justifyContent:"center",display:"flex",marginTop:"10px"}}>
       <StopWatch isActive={isActive} isPaused={isPaused} time={time}/>
       </div>
       <p>Turnos: {turns}</p>
