@@ -102,6 +102,10 @@ function App() {
       <span className="digits mili-sec">
         ${("0" + ((time / 10) % 100)).slice(-2)}'''
       </span>
+      <br/>
+      <p>Turnos: ${turns}</p>
+      <p> aciertos: ${contador} </p>
+      <p> fallos: ${turns-contador} </p>
     </div>
       `,
       icon: "success",
@@ -130,12 +134,13 @@ function App() {
           });
         });
         setContador((prevContador) => Number(prevContador) + 1);
-        if (contador === 1) {
+        if (contador === 5) {
           terminacion();
           setIsPaused(true)
         }
         resetTurn();
       } else {
+        
         setTimeout(() => resetTurn(), 1000);
       }
     }
@@ -151,10 +156,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Pokemon Matching</h1>
+      <h1>Dragon ball Matching</h1>
       <h5>
-        Prueba tu memoria con pokemons!! Un trabajo de Benjamin Oyarzun,
-        Santiago Faginoli, Nicolas Pereyra y Lautaro Faure.
+        Prueba tu memoria con Personajes de Dragon Ball!! Un trabajo Nicolas Pereyra y Lautaro Faure.
       </h5>
       <button onClick={shuffleCards} className="btn">
         Nuevo juego
@@ -163,6 +167,8 @@ function App() {
       <StopWatch isActive={isActive} isPaused={isPaused} time={time}/>
       </div>
       <p>Turnos: {turns}</p>
+      <p> aciertos: {contador} </p>
+      <p> fallos: {turns-contador} </p>
       <div className="card-grid">
         {cards.map((card) => (
           <SingleCard
