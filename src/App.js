@@ -74,7 +74,7 @@ function App() {
   return (
     <div className="App">
       <h1>Pokemon Matching</h1>
-      <h5>Prueba tu memoria con pokemons!!</h5>
+      <h5>Prueba tu memoria con pokemons!! Un trabajo de Benjamin Oyarzun y Santiago Faginoli</h5>
       <button onClick={shuffleCards} className='btn' >Nuevo juego</button>
       <p>Turnos: {turns}</p>
       <div className="card-grid">
